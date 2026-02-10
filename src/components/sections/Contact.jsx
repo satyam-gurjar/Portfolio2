@@ -18,7 +18,8 @@ const Contact = ({ data }) => {
     message: '',
   });
 
-  const [status, setStatus] = useState('');
+  const [status, setStatus] = useState({ type: '', message: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -27,18 +28,44 @@ const Contact = ({ data }) => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    // This is a placeholder - integrate with your backend or email service
-    console.log('Form submitted:', formData);
-    setStatus('Message sent successfully!');
-    
-    // Reset form
-    setFormData({ name: '', email: '', subject: '', message: '' });
-    
-    // Clear status after 3 seconds
-    setTimeout(() => setStatus(''), 3000);
+    setIsSubmitting(true);
+    setStatus({ type: '', message: '' });
+
+    try {
+      const response = await fetch('https://formspree.io/f/xeeloyva', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          _replyto: formData.email,
+        }),
+      });
+
+      if (response.ok) {
+        setStatus({
+          type: 'success',
+          message: '✓ Message sent successfully! I\'ll get back to you soon.',
+        });
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
+      setStatus({
+        type: 'error',
+        message: '✗ Failed to send message. Please try again or email me directly.',
+      });
+    } finally {
+      setIsSubmitting(false);
+      setTimeout(() => setStatus({ type: '', message: '' }), 5000);
+    }
   };
 
   const contactInfo = [
@@ -205,24 +232,37 @@ const Contact = ({ data }) => {
                   />
                 </div>
 
+                {/* Status message */}
+                {status.message && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className={`p-4 rounded-lg ${
+                      status.type === 'success'
+                        ? 'bg-green-500/10 border border-green-500/20 text-green-400'
+                        : 'bg-red-500/10 border border-red-500/20 text-red-400'
+                    }`}
+                  >
+                    {status.message}
+                  </motion.div>
+                )}
+
                 <Button
                   type="submit"
                   variant="primary"
-                  icon={<FiSend />}
+                  icon={isSubmitting ? null : <FiSend />}
                   className="w-full"
+                  disabled={isSubmitting}
                 >
-                  Send Message
+                  {isSubmitting ? (
+                    <span className="flex items-center justify-center gap-2">
+                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                      Sending...
+                    </span>
+                  ) : (
+                    'Send Message'
+                  )}
                 </Button>
-
-                {status && (
-                  <motion.p
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="text-green-400 text-center font-medium"
-                  >
-                    {status}
-                  </motion.p>
-                )}
               </form>
             </Card>
           </motion.div>

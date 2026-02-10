@@ -201,58 +201,40 @@ export const portfolioData = {
   // ===================================
   projects: [
     {
-      title: 'E-Commerce Platform',
+      title: 'AI Personal Assistant',
       description:
-        'Full-featured e-commerce platform with cart, checkout, payment integration, and admin dashboard.',
-      image: 'https://via.placeholder.com/600x400/0ea5e9/ffffff?text=E-Commerce',
-      tech: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Redux'],
-      github: 'https://github.com/yourusername/project1',
-      demo: 'https://project1-demo.netlify.app',
+        'Intelligent personal assistant with Python backend server, desktop and Android applications. Powered by locally hosted Llama model with custom fine-tuning for personalized responses.',
+      image: 'https://via.placeholder.com/600x400/8b5cf6/ffffff?text=AI+Assistant',
+      tech: ['Python', 'Llama', 'TensorFlow', 'Android', 'PyQt', 'FastAPI'],
+      github: 'https://github.com/satyam-gurjar/ai-assistant',
+      demo: null,
     },
     {
-      title: 'Social Media App',
+      title: 'AI Powered Path Generator',
       description:
-        'Real-time social media application with posts, comments, likes, and user authentication.',
-      image: 'https://via.placeholder.com/600x400/8b5cf6/ffffff?text=Social+Media',
-      tech: ['React', 'Express', 'MongoDB', 'Socket.io', 'JWT'],
-      github: 'https://github.com/yourusername/project2',
-      demo: 'https://project2-demo.netlify.app',
+        'MERN stack web application that generates optimized learning paths and career roadmaps using AI. Features intelligent content recommendations and progress tracking.',
+      image: 'https://via.placeholder.com/600x400/0ea5e9/ffffff?text=Path+Generator',
+      tech: ['React', 'Node.js', 'MongoDB', 'Express', 'OpenAI API', 'Redux'],
+      github: 'https://github.com/satyam-gurjar/path-generator',
+      demo: 'https://path-generator-demo.vercel.app',
     },
     {
-      title: 'Task Management System',
+      title: 'House Renting Website',
       description:
-        'Collaborative task management tool with boards, lists, drag-and-drop, and team features.',
-      image: 'https://via.placeholder.com/600x400/10b981/ffffff?text=Task+Manager',
-      tech: ['React', 'Node.js', 'PostgreSQL', 'Redux', 'Material-UI'],
-      github: 'https://github.com/yourusername/project3',
-      demo: 'https://project3-demo.netlify.app',
+        'Full-featured property rental platform with advanced search filters, booking system, payment integration, and real-time availability updates. Complete admin dashboard for property management.',
+      image: 'https://via.placeholder.com/600x400/10b981/ffffff?text=House+Rental',
+      tech: ['React', 'Node.js', 'MongoDB', 'Express', 'Stripe', 'JWT'],
+      github: 'https://github.com/satyam-gurjar/house-rental',
+      demo: 'https://house-rental-demo.netlify.app',
     },
     {
-      title: 'Blog Platform',
+      title: 'Code Generator & Reviewer AI',
       description:
-        'Modern blogging platform with markdown support, categories, tags, and SEO optimization.',
-      image: 'https://via.placeholder.com/600x400/f59e0b/ffffff?text=Blog+Platform',
-      tech: ['Next.js', 'MongoDB', 'Next-Auth', 'Tailwind'],
-      github: 'https://github.com/yourusername/project4',
-      demo: 'https://project4-demo.vercel.app',
-    },
-    {
-      title: 'Weather Dashboard',
-      description:
-        'Real-time weather dashboard with forecasts, maps, and location-based data visualization.',
-      image: 'https://via.placeholder.com/600x400/ec4899/ffffff?text=Weather+App',
-      tech: ['React', 'OpenWeather API', 'Chart.js', 'Tailwind'],
-      github: 'https://github.com/yourusername/project5',
-      demo: 'https://project5-demo.netlify.app',
-    },
-    {
-      title: 'Chat Application',
-      description:
-        'Real-time chat application with private messages, group chats, and file sharing.',
-      image: 'https://via.placeholder.com/600x400/06b6d4/ffffff?text=Chat+App',
-      tech: ['React', 'Socket.io', 'Node.js', 'MongoDB', 'Express'],
-      github: 'https://github.com/yourusername/project6',
-      demo: 'https://project6-demo.herokuapp.com',
+        'AI-powered development tool that generates clean, production-ready code and performs intelligent code reviews. Detects bugs, suggests optimizations, and enforces best practices.',
+      image: 'https://via.placeholder.com/600x400/ec4899/ffffff?text=Code+AI',
+      tech: ['Python', 'GPT-4', 'LangChain', 'React', 'FastAPI', 'Docker'],
+      github: 'https://github.com/satyam-gurjar/code-reviewer-ai',
+      demo: 'https://code-ai-demo.vercel.app',
     },
   ],
 
@@ -305,28 +287,28 @@ export const portfolioData = {
   // CONTACT SECTION
   // ===================================
   contact: {
-    email: 'your.email@example.com',
-    phone: '+1 (123) 456-7890',
-    location: 'City, Country',
+    email: 'satyamgurjar108@gmail.com',
+    phone: '+91 62659-95899',
+    location: 'Bhopal, India',
     socialLinks: [
       {
         name: 'GitHub',
-        url: 'https://github.com/yourusername',
+        url: 'https://github.com/satyam-gurjar',
         icon: <FiGithub />,
       },
       {
         name: 'LinkedIn',
-        url: 'https://linkedin.com/in/yourusername',
+        url: 'https://linkedin.com/in/satyam-gurjar-381b53205/',
         icon: <FiLinkedin />,
       },
       {
         name: 'Twitter',
-        url: 'https://twitter.com/yourusername',
+        url: 'https://twitter.com/satyamgurjar02',
         icon: <FiTwitter />,
       },
       {
         name: 'Email',
-        url: 'mailto:your.email@example.com',
+        url: 'mailto:satyamgurjar108@gmail.com',
         icon: <FiMail />,
       },
     ],
