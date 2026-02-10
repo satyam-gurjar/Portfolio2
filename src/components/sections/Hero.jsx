@@ -36,7 +36,7 @@ const Hero = ({ data }) => {
       
       {/* Animated glow orbs */}
       <motion.div 
-        className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl"
+        className="absolute top-1/4 left-1/4 w-96 h-96 bg-red-500/10 rounded-full blur-3xl"
         animate={{
           scale: [1, 1.2, 1],
           opacity: [0.3, 0.5, 0.3],
@@ -48,7 +48,7 @@ const Hero = ({ data }) => {
         }}
       />
       <motion.div 
-        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"
+        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-red-600/10 rounded-full blur-3xl"
         animate={{
           scale: [1.2, 1, 1.2],
           opacity: [0.3, 0.5, 0.3],
@@ -71,7 +71,7 @@ const Hero = ({ data }) => {
         {/* Greeting */}
         <motion.p
           variants={bounceIn}
-          className="text-primary-400 font-semibold text-lg md:text-xl mb-4"
+          className="text-red-500 font-semibold text-lg md:text-xl mb-4"
         >
           {data.greeting}
         </motion.p>
@@ -84,7 +84,7 @@ const Hero = ({ data }) => {
           <span className="relative inline-block">
             {data.name}
             <motion.span
-              className="absolute -inset-2 bg-gradient-to-r from-primary-500/20 to-purple-500/20 blur-2xl -z-10"
+              className="absolute -inset-2 bg-gradient-to-r from-red-500/20 to-red-600/20 blur-2xl -z-10"
               animate={{
                 scale: [1, 1.2, 1],
                 opacity: [0.5, 0.8, 0.5],

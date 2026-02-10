@@ -34,7 +34,7 @@ const Loader = () => {
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-            className="w-20 h-20 mx-auto mb-8 border-4 border-primary-500 border-t-transparent rounded-full"
+            className="w-20 h-20 mx-auto mb-8 border-4 border-red-500 border-t-transparent rounded-full"
           />
           
           {/* Loading text */}
@@ -52,7 +52,7 @@ const Loader = () => {
             <motion.div
               initial={{ width: 0 }}
               animate={{ width: `${progress}%` }}
-              className="h-full bg-gradient-to-r from-primary-600 to-primary-400"
+              className="h-full bg-gradient-to-r from-red-600 to-red-400"
             />
           </div>
           

@@ -16,9 +16,9 @@ const Button = ({
   const baseClasses = 'inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300';
   
   const variants = {
-    primary: 'bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 shadow-lg shadow-primary-500/30 hover:shadow-xl hover:shadow-primary-500/50 text-white',
+    primary: 'bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 shadow-lg shadow-red-500/30 hover:shadow-xl hover:shadow-red-500/50 text-white',
     secondary: 'glass hover:bg-white/10 text-white',
-    outline: 'border-2 border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white',
+    outline: 'border-2 border-red-500 text-red-500 hover:bg-red-500 hover:text-white',
   };
 
   const classes = `${baseClasses} ${variants[variant]} ${className}`;

@@ -14,7 +14,7 @@ const Skills = ({ data }) => {
         <SectionTitle
           title="Skills & Technologies"
           subtitle="My technical toolbox and expertise"
-          gradient={true}
+          splitAt="Technologies"
         />
 
         <motion.div

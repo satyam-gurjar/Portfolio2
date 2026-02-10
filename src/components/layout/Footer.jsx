@@ -45,7 +45,7 @@ const Footer = ({ data }) => {
                 <a
                   key={index}
                   href={`#${link.toLowerCase()}`}
-                  className="text-gray-400 hover:text-primary-400 transition-colors"
+                  className="text-gray-400 hover:text-red-400 transition-colors"
                 >
                   {link}
                 </a>
@@ -69,7 +69,7 @@ const Footer = ({ data }) => {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 glass rounded-lg flex items-center justify-center text-gray-400 hover:text-primary-400 hover:bg-white/10 transition-all"
+                  className="w-10 h-10 glass rounded-lg flex items-center justify-center text-gray-400 hover:text-red-400 hover:bg-white/10 transition-all"
                 >
                   {link.icon}
                 </a>
@@ -104,13 +104,13 @@ const Footer = ({ data }) => {
         viewport={{ once: false }}
         whileHover={{ scale: 1.1, y: -5 }}
         whileTap={{ scale: 0.9 }}
-        className="absolute bottom-8 right-8 w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center text-white shadow-lg shadow-primary-500/30"
+        className="absolute bottom-8 right-8 w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center text-white shadow-lg shadow-red-500/30"
       >
         <FiArrowUp className="text-xl" />
       </motion.button>
 
       {/* Background decoration */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] bg-primary-500/5 rounded-full blur-3xl -z-10" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] bg-red-500/5 rounded-full blur-3xl -z-10" />
     </footer>
   );
 };

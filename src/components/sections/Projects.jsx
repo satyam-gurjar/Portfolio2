@@ -16,7 +16,7 @@ const Projects = ({ data }) => {
         <SectionTitle
           title="Featured Projects"
           subtitle="Some of my best work and side projects"
-          gradient={true}
+          splitAt="Projects"
         />
 
         <motion.div

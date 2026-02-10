@@ -95,7 +95,7 @@ const Contact = ({ data }) => {
         <SectionTitle
           title="Get In Touch"
           subtitle="Let's work together on your next project"
-          gradient={true}
+          splitAt="Touch"
         />
 
         <div className="grid lg:grid-cols-2 gap-12">
@@ -120,7 +120,7 @@ const Contact = ({ data }) => {
             {contactInfo.map((info, index) => (
               <motion.div key={index} variants={fadeInUp}>
                 <Card hover={false} className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center text-white text-xl flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-lg flex items-center justify-center text-white text-xl flex-shrink-0">
                     {info.icon}
                   </div>
                   <div>
@@ -128,7 +128,7 @@ const Contact = ({ data }) => {
                     {info.link ? (
                       <a
                         href={info.link}
-                        className="text-white font-semibold hover:text-primary-400 transition-colors"
+                        className="text-white font-semibold hover:text-red-400 transition-colors"
                       >
                         {info.value}
                       </a>
@@ -150,7 +150,7 @@ const Contact = ({ data }) => {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 glass rounded-lg flex items-center justify-center text-gray-400 hover:text-primary-400 hover:bg-white/10 transition-all"
+                    className="w-12 h-12 glass rounded-lg flex items-center justify-center text-gray-400 hover:text-red-400 hover:bg-white/10 transition-all"
                   >
                     {link.icon}
                   </a>
@@ -179,7 +179,7 @@ const Contact = ({ data }) => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-dark-400 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-primary-500 transition-colors"
+                    className="w-full px-4 py-3 bg-dark-400 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-red-500 transition-colors"
                     placeholder="John Doe"
                   />
                 </div>
@@ -195,7 +195,7 @@ const Contact = ({ data }) => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-dark-400 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-primary-500 transition-colors"
+                    className="w-full px-4 py-3 bg-dark-400 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-red-500 transition-colors"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -211,7 +211,7 @@ const Contact = ({ data }) => {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-dark-400 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-primary-500 transition-colors"
+                    className="w-full px-4 py-3 bg-dark-400 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-red-500 transition-colors"
                     placeholder="Project Inquiry"
                   />
                 </div>
@@ -227,7 +227,7 @@ const Contact = ({ data }) => {
                     onChange={handleChange}
                     required
                     rows="5"
-                    className="w-full px-4 py-3 bg-dark-400 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-primary-500 transition-colors resize-none"
+                    className="w-full px-4 py-3 bg-dark-400 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-red-500 transition-colors resize-none"
                     placeholder="Tell me about your project..."
                   />
                 </div>
@@ -270,7 +270,7 @@ const Contact = ({ data }) => {
       </div>
 
       {/* Background decoration */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-primary-500/5 rounded-full blur-3xl -z-10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-red-500/5 rounded-full blur-3xl -z-10" />
     </section>
   );
 };

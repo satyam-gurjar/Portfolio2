@@ -23,11 +23,11 @@ const ScrollIndicator = () => {
     <div className="fixed right-4 top-1/2 -translate-y-1/2 z-40 hidden lg:block">
       <div className="relative h-64 w-1 bg-white/10 rounded-full">
         <motion.div
-          className="absolute top-0 left-0 w-full bg-gradient-to-b from-primary-500 to-purple-500 rounded-full"
+          className="absolute top-0 left-0 w-full bg-gradient-to-b from-red-500 to-red-600 rounded-full"
           style={{ height: `${scrollProgress}%` }}
         />
         <motion.div
-          className="absolute left-1/2 -translate-x-1/2 w-3 h-3 bg-primary-500 rounded-full"
+          className="absolute left-1/2 -translate-x-1/2 w-3 h-3 bg-red-500 rounded-full"
           style={{ top: `${scrollProgress}%` }}
           animate={{ scale: [1, 1.2, 1] }}
           transition={{ duration: 2, repeat: Infinity }}

@@ -92,7 +92,7 @@ const Navbar = ({ data }) => {
                 {activeSection === item.id && (
                   <motion.div
                     layoutId="activeSection"
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-primary-500 to-purple-500"
+                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-red-500 to-red-600"
                     initial={false}
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
@@ -131,7 +131,7 @@ const Navbar = ({ data }) => {
                   transition={{ delay: index * 0.1 }}
                   className={`text-left py-2 px-4 rounded-lg transition-colors ${
                     activeSection === item.id
-                      ? 'bg-primary-500/20 text-primary-400'
+                      ? 'bg-red-500/20 text-red-400'
                       : 'text-gray-300 hover:bg-white/5 hover:text-white'
                   }`}
                 >

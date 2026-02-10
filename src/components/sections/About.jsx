@@ -14,25 +14,25 @@ const About = ({ data }) => {
       icon: <FiCode className="text-3xl" />,
       title: 'Frontend',
       description: 'Modern UI with React',
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-red-500 to-red-600',
     },
     {
       icon: <FiDatabase className="text-3xl" />,
       title: 'Backend',
       description: 'Scalable APIs',
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-red-600 to-red-700',
     },
     {
       icon: <FiLayers className="text-3xl" />,
       title: 'System Design',
       description: 'Architecture patterns',
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-red-500 to-red-700',
     },
     {
       icon: <FiShield className="text-3xl" />,
       title: 'Security',
       description: 'Best practices',
-      color: 'from-orange-500 to-red-500',
+      color: 'from-red-700 to-red-800',
     },
   ];
 
@@ -42,7 +42,7 @@ const About = ({ data }) => {
         <SectionTitle
           title="About Me"
           subtitle="Get to know more about my journey and expertise"
-          gradient={true}
+          splitAt="Me"
         />
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -66,10 +66,10 @@ const About = ({ data }) => {
               className="flex items-center gap-4 text-gray-400"
             >
               <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary-500 to-transparent" />
-              <span className="text-primary-400 font-semibold">
+              <span className="text-red-400 font-semibold">
                 {data.yearsOfExperience}
               </span>
-              <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary-500 to-transparent" />
+              <div className="h-px flex-1 bg-gradient-to-r from-red-500 via-transparent to-transparent" />
             </motion.div>
 
             <motion.p
@@ -109,7 +109,7 @@ const About = ({ data }) => {
       </div>
 
       {/* Background decoration */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-500/5 rounded-full blur-3xl -z-10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-red-500/5 rounded-full blur-3xl -z-10" />
     </section>
   );
 };
