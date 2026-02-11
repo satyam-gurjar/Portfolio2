@@ -207,7 +207,7 @@ export const portfolioData = {
       image: 'https://via.placeholder.com/600x400/8b5cf6/ffffff?text=AI+Assistant',
       tech: ['Python', 'Llama', 'TensorFlow', 'Android', 'PyQt', 'FastAPI'],
       github: 'https://github.com/satyam-gurjar/ai-assistant',
-      demo: null,
+      demo: 'https://shyver.vercel.app',
     },
     {
       title: 'AI Powered Path Generator',
