@@ -222,7 +222,7 @@ export const portfolioData = {
       title: 'House Renting Website',
       description:
         'Full-featured property rental platform with advanced search filters, booking system, payment integration, and real-time availability updates. Complete admin dashboard for property management.',
-      image: 'https://via.placeholder.com/600x400/10b981/ffffff?text=House+Rental',
+      video: '/House.mp4',
       tech: ['React', 'Node.js', 'MongoDB', 'Express', 'Stripe', 'JWT'],
       github: 'https://github.com/satyam-gurjar/House/tree/main/House',
       demo: 'https://house-1-o1bt.onrender.com',
