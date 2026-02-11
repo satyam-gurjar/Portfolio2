@@ -206,7 +206,7 @@ export const portfolioData = {
         'Intelligent personal assistant with Python backend server, desktop and Android applications. Powered by locally hosted Llama model with custom fine-tuning for personalized responses.',
       image: 'https://via.placeholder.com/600x400/8b5cf6/ffffff?text=AI+Assistant',
       tech: ['Python', 'Llama', 'TensorFlow', 'Android', 'PyQt', 'FastAPI'],
-      github: 'https://github.com/satyam-gurjar/ai-assistant',
+      github: 'https://github.com/satyam-gurjar/shyver',
       demo: 'https://shyver.vercel.app',
     },
     {
