@@ -29,30 +29,41 @@ const Projects = ({ data }) => {
           {data.map((project, index) => (
             <motion.div key={index} variants={fadeInUp}>
               <Card className="h-full flex flex-col group">
-                {/* Project Image */}
-                <div className="relative overflow-hidden rounded-lg mb-4 aspect-video bg-dark-400">
-                  <motion.img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover"
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
+
+                {/* Project Video */}
+                <div
+                  className="relative overflow-hidden rounded-lg mb-4 aspect-video group"
+                  onMouseEnter={(e) => {
+                    const video = e.currentTarget.querySelector("video");
+                    video.play();
+                  }}
+                  onMouseLeave={(e) => {
+                    const video = e.currentTarget.querySelector("video");
+                    video.pause();
+                    video.currentTime = 0; // reset to first frame (optional)
+                  }}
+                >
+                  <video
+                    src={project.video}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-dark-500 via-transparent to-transparent opacity-60" />
-                  
-                  {/* Overlay on hover */}
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    whileHover={{ opacity: 1 }}
-                    className="absolute inset-0 bg-primary-600/90 flex items-center justify-center gap-4"
-                  >
+
+                  {/* Soft gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+
+                  {/* Icons */}
+                  <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     {project.github && (
                       <a
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center 
-                        hover:bg-white/30 transition-colors"
+        hover:bg-white/30 transition-colors"
                       >
                         <FiGithub className="text-white text-xl" />
                       </a>
@@ -63,13 +74,15 @@ const Projects = ({ data }) => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center 
-                        hover:bg-white/30 transition-colors"
+        hover:bg-white/30 transition-colors"
                       >
                         <FiExternalLink className="text-white text-xl" />
                       </a>
                     )}
-                  </motion.div>
+                  </div>
                 </div>
+
+
 
                 {/* Project Info */}
                 <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-primary-400 transition-colors">
@@ -115,6 +128,7 @@ const Projects = ({ data }) => {
                     </Button>
                   )}
                 </div>
+
               </Card>
             </motion.div>
           ))}

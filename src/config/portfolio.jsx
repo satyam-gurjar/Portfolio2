@@ -204,7 +204,7 @@ export const portfolioData = {
       title: 'AI Personal Assistant',
       description:
         'Intelligent personal assistant with Python backend server, desktop and Android applications. Powered by locally hosted Llama model with custom fine-tuning for personalized responses.',
-      image: 'https://via.placeholder.com/600x400/8b5cf6/ffffff?text=AI+Assistant',
+      video: '/aiassistant.mp4',
       tech: ['Python', 'Llama', 'TensorFlow', 'Android', 'PyQt', 'FastAPI'],
       github: 'https://github.com/satyam-gurjar/shyver',
       demo: 'https://shyver.vercel.app',
@@ -213,7 +213,7 @@ export const portfolioData = {
       title: 'AI Powered Path Generator',
       description:
         'MERN stack web application that generates optimized learning paths and career roadmaps using AI. Features intelligent content recommendations and progress tracking.',
-      image: 'https://via.placeholder.com/600x400/0ea5e9/ffffff?text=Path+Generator',
+      video: '/career.mp4',
       tech: ['React', 'Node.js', 'MongoDB', 'Express', 'OpenAI API', 'Redux'],
       github: 'https://github.com/satyam-gurjar/path-generator',
       demo: 'https://path-generator-demo.vercel.app',
