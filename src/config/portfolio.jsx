@@ -215,7 +215,7 @@ export const portfolioData = {
         'MERN stack web application that generates optimized learning paths and career roadmaps using AI. Features intelligent content recommendations and progress tracking.',
       video: '/career.mp4',
       tech: ['React', 'Node.js', 'MongoDB', 'Express', 'OpenAI API', 'Redux'],
-      github: 'https://github.com/satyam-gurjar/path-generator',
+      github: 'https://github.com/satyam-gurjar/Roadmap',
       demo: 'https://path-generator-demo.vercel.app',
     },
     {
@@ -224,8 +224,8 @@ export const portfolioData = {
         'Full-featured property rental platform with advanced search filters, booking system, payment integration, and real-time availability updates. Complete admin dashboard for property management.',
       image: 'https://via.placeholder.com/600x400/10b981/ffffff?text=House+Rental',
       tech: ['React', 'Node.js', 'MongoDB', 'Express', 'Stripe', 'JWT'],
-      github: 'https://github.com/satyam-gurjar/house-rental',
-      demo: 'https://house-rental-demo.netlify.app',
+      github: 'https://github.com/satyam-gurjar/House/tree/main/House',
+      demo: 'https://house-1-o1bt.onrender.com',
     },
     {
       title: 'Code Generator & Reviewer AI',
